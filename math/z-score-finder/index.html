@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z Score finder</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="z-score">Z-score</label>
+        <br />
+        <input id="z-score" type="number" max="6.5" min="-6.5" placeholder="1.96" step="0.01" />
+        <button type="button" onclick="showProbability()">Show probability</button>
+      </div>
+      <div>
+        <label for="probability">Probability (in range 0-1)</label>
+        <br />
+        <input id="probability" type="number" max="1" min="0" placeholder="0.8" step="0.01" />
+        <button type="button" onclick="showZScore()">Show z-score</button>
+      </div>
+    </form>
+    <div class="results">
+      <h3>Results:</h3>
+      <div>
+        <h4>Z-score:</h4>
+        <span id="result-z"></span>
+      </div>
+      <div>
+        <h4>Probability:</h4>
+        <span id="result-p"></span>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
